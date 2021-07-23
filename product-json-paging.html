@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .cakeImage {
+            width: 70%;
+            padding: 1.5rem;
+            border: solid lightgray medium;
+            display: block;
+            margin: auto;
+        }
+
+        .divImage {
+            text-align: center;
+            /* border: solid goldenrod medium; */
+            margin: 0.5rem 0rem;
+        }
+
+        .v-menu {
+            border: gray solid medium;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <!-- khoi menu -->
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">CoOkies Bakery</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Product <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="products.html">Product</a></li>
+                            <li><a href="product json.html">Product json</a></li>
+                            <li><a href="product-json-paging.html">Product json pagination</a></li>
+                            <li><a href="product json search.html">Product json search</a></li>
+                            <li><a href="product json categories.html">Product jason category</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- <form class="navbar-form navbar-left" id="formSearch">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" id="search" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form> -->
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+        <!-- ket thuc khoi menu -->
+
+
+        <div class="page-header">
+            <h1 style="padding-top: 2rem;">Products </h1>
+        </div>
+
+
+        <!-- khoi hien thi san pham -->
+        <div class="row" id="products">
+
+            <div class="col-sm-6 col-md-4 divImage" data-id="abc">
+                <img src="image/cake/almond croissant.PNG" alt="" class="cakeImage">
+            </div>
+
+        </div>
+        <!-- ket thuc khoi hien thi san pham trong 1 trang -->
+
+        <!-- khoi phan trang -->
+        <ul class="pagination">
+            <li><a href="#" id="link" data-id="1">&laquo;</a></li>
+            <li><a href="#" id="link" data-id="1">1</a></li>
+            <li><a href="#" id="link" data-id="2">2</a></li>
+            <li><a href="#" id="link" data-id="3">3</a></li>
+            <li><a href="#" id="link" data-id="4">4</a></li>
+            <li><a href="#" id="link" data-id="1">&raquo;</a></li>
+        </ul>
+        <!-- ket thuc khoi phan trang -->
+
+
+        <div class="panel-footer" style="text-align: center;">
+            Copyright &copy; by ABC Team - November, 2020
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="imgs-zoom-area"><img id="zoom_03" src="image/cake/almond croissant.PNG"
+                                        style="width: 100%;" alt=""></div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="text-black-1">Product Name </h3>
+                                <h6 class="brand-name-2">Product Price</h6>
+                                <h6 class="brand-name-3">Product Cat </h6>
+                                <div role="tabpanel" class="tab-pane active" id="description">
+                                    <p>There are many variations of passages of Lorem Ipsum available, but the majo Rity
+                                        have be suffered alteration in some form, by injected humou or randomis Rity
+                                        have be suffered alteration in some form, by injected humou or randomis words
+                                        which donot look even slightly believable. If you are going to use a passage
+                                        Lorem Ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        let data = [];
+        let itemsPerPage = 3;
+        let page = 1;
+
+        $(document).ready(function () {
+
+            $.getJSON("js/data.json", function (items) {
+
+                data = items;
+
+                displayImages(data, page);
+                displayPagination(data)
+
+            });
+
+
+
+
+            //lap trinh cho su kien click so trang tren cac the a
+            $(document).on('click', "#link", function (e) {
+                e.preventDefault(); // vo hieu hoa chuc nang lien ket trang cua the a
+
+                let page_no = $(this).data('id');
+                console.log(`page-id = ${page_no}`);
+                displayImages(data,  page_no);
+
+            })
+
+
+            $(document).on('click', ".divImage", function () {
+                let id = $(this).data('id')
+                let product = data.filter(ele => ele.id == id)
+
+                setModal(product[0])
+                $('#myModal').modal('show');
+            })
+
+        });
+
+
+        //ham hien thi so nut phan trang theo tong so pt trong data
+        function displayPagination(data){
+            let n = data.length / itemsPerPage;
+
+            let s =`<li><a href="#" id="link" data-id="1">&laquo;</a></li>`;
+            for(let i= 1; i <=n; i++){
+                s += `<li><a href="#" id="link" data-id="${i}">${i}</a></li>`;
+            }
+            s+=`<li><a href="#" id="link" data-id="${n}">&raquo;</a></li>`;
+
+            $(".pagination").html(s);
+
+        }
+
+
+
+
+        function displayImages(data, page) {
+            let s = ``;
+
+            // $.each(items, function (k, v) {
+
+            //     s += `<div class="col-sm-6 col-md-4 divImage" data-id="${v.id}">
+            //             <img src="image/cake/${v.pic}" alt="" class="cakeImage">
+            //             <p>
+            //                 name: ${v.name} <br>
+            //                 price: ${v.price}
+            //             </p> 
+            //         </div> `;
+
+            // });
+
+            let startItem = (page - 1) * itemsPerPage;
+            let stopItem = startItem + itemsPerPage;
+
+            for (let i = startItem; i < stopItem; i++) {
+                s += `<div class="col-sm-6 col-md-4 divImage" data-id="${data[i].id}">
+                        <img src="image/cake/${data[i].pic}" alt="" class="cakeImage">
+                        <p>
+                            name: ${data[i].name} <br>
+                            price: ${data[i].price}
+                        </p> 
+                    </div> `;
+            }
+
+            $("#products").html(s);
+
+        }
+
+        function setModal(product) {
+            let x = `
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="imgs-zoom-area"><img id="zoom_03" src="image/cake/${product.pic}"   style="width: 100%;" alt=""></div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-black-1">${product.name}</h3>
+                    <h6 class="brand-name-2">${product.price}</h6>
+                    <h6 class="brand-name-3">${product.id.toUpperCase()}</h6>
+                    <div role="tabpanel" class="tab-pane active" id="description">
+                        <p>${product.description}</p>
+                    </div>
+                </div>
+            </div>           
+            `;
+
+            $('.modal-body').html(x)
+        }
+
+
+    </script>
+</body>
+
+</html>
